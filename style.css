@@ -1,0 +1,243 @@
+html, body {
+  font-size: 62.5%;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  background-color: #383838;
+}
+
+.wrap {
+  max-width: 900px;
+  color: #ffffff;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  grid-template-rows: 20% 1fr 1fr;
+  -webkit-column-gap: 300px;
+     -moz-column-gap: 300px;
+          column-gap: 100px;
+          padding: 50% 30px 50px;
+}
+
+.new-release {
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.new-release::after {
+  content: 'NEW';
+  background-color: red;
+  color: #ffffff;
+  position: absolute;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 7px;
+  top: -30px;
+  left: 0px;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 900;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.desc {
+  font-size: 1.5rem;
+  color: #c6c6c6;
+  grid-column: 1/2;
+  grid-row: 2/4;
+  line-height: 2rem;
+  word-break: keep-all;
+}
+
+.summary {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 3rem;
+}
+
+.desc > p:nth-child(3) {
+  margin-top: 30px;
+}
+
+.desc > p:nth-child(3),
+.desc > p:nth-child(4) {
+  margin-bottom: 15px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+.genre > h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.genre > p {
+  float: left;
+  font-size: 1.5rem;
+  background-color: #383838;
+  color: #c6c6c6;
+  padding: 2px 5px 2px;
+  margin: 3px;
+  border-radius: 4px;
+}
+
+.ratings > h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.ratings {
+  width: 240px;
+  position: relative;
+  overflow: hidden;
+  background-color: blue;
+}
+
+.ratings::after {
+  content: " ";
+  display: block;
+  background-position: left bottom;
+  width: 0px;
+}
+
+.ratings,
+.ratings::after {
+  background-image: url(./images/star.png);
+  background-size: 240px 96px;
+  height: 48px;
+}
+
+.ratings_10::after { width: 20%; }
+.ratings_15::after { width: 30%; }
+.ratings_20::after { width: 40%; }
+.ratings_25::after { width: 50%; }
+.ratings_30::after { width: 60%; }
+.ratings_35::after { width: 70%; }
+.ratings_40::after { width: 80%; }
+.ratings_45::after { width: 90%; }
+.ratings_50::after { width: 100%; }
+
+/* .ratings > .one-star::after {
+  float: left;
+  content: "";
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  background-image: url(./images/star.png);
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: 0px -45px;
+} */
+
+.casts > h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.casts {
+  position: relative;
+}
+
+.casts.one {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  background-image: url(./images/tae.jpg);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px solid rgba(20, 20, 20);
+}
+
+.casts.two {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  background-image: url(./images/ryu.jpg);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-left: -5px;
+  border: 5px solid rgba(20, 20, 20);
+}
+
+.casts.three {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  background-image: url(./images/jin.jpg);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-left: -10px;
+  border: 5px solid rgba(20, 20, 20);
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    margin-bottom: 50px;
+  }
+  
+  .spec {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 57%;
+  }
+
+  .desc {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .details {
+    grid-column: 1/2;
+    grid-row: 4/7;
+    padding-top: 50px;
+  }
+
+  .genre > h2 {
+    margin-bottom: 10px;
+  }
+  .ratings > h2 {
+    margin-bottom: 10px;
+  }
+  .casts > h2 {
+    margin-bottom: 10px;
+  }
+  
+  .casts.one {
+    top: 32px;
+  }
+  .casts.two {
+    top: 32px;
+  }
+  .casts.three {
+    top: 32px;
+  }
+}
