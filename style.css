@@ -175,6 +175,7 @@ html, body {
   border: 5px solid rgba(20, 20, 20);
 }
 
+
 @media (max-width: 900px) {
   .wrap {
     margin-bottom: 50px;
@@ -198,23 +199,7 @@ html, body {
     padding-top: 50px;
   }
 
-  .genre > h2 {
+  .details h2 {
     margin-bottom: 10px;
-  }
-  .ratings > h2 {
-    margin-bottom: 10px;
-  }
-  .casts > h2 {
-    margin-bottom: 10px;
-  }
-  
-  .casts.one {
-    top: 32px;
-  }
-  .casts.two {
-    top: 32px;
-  }
-  .casts.three {
-    top: 32px;
   }
 }
