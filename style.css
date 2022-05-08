@@ -74,6 +74,7 @@ html, body {
   margin-bottom: 15px;
 }
 
+/* 장르, 별점, 출연진 정보 */
 .details {
   display: grid;
   grid-template-columns: 1fr;
@@ -82,9 +83,10 @@ html, body {
   grid-row: 1/4;
 }
 
-.genre > h2 {
+/* 장르 */
+.details h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .genre > p {
@@ -97,59 +99,37 @@ html, body {
   border-radius: 4px;
 }
 
-.ratings > h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
+/* 별점 */
 .ratings {
   width: 240px;
-  position: relative;
   overflow: hidden;
-  background-color: blue;
 }
 
-.ratings::after {
-  content: " ";
+.ratings::before {
+  content: "";
   display: block;
   background-position: left bottom;
   width: 0px;
 }
 
 .ratings,
-.ratings::after {
+.ratings::before {
   background-image: url(./images/star.png);
   background-size: 240px 96px;
   height: 48px;
 }
 
-.ratings_10::after { width: 20%; }
-.ratings_15::after { width: 30%; }
-.ratings_20::after { width: 40%; }
-.ratings_25::after { width: 50%; }
-.ratings_30::after { width: 60%; }
-.ratings_35::after { width: 70%; }
-.ratings_40::after { width: 80%; }
-.ratings_45::after { width: 90%; }
-.ratings_50::after { width: 100%; }
+.ratings_10::before { width: 20%; }
+.ratings_15::before { width: 30%; }
+.ratings_20::before { width: 40%; }
+.ratings_25::before { width: 50%; }
+.ratings_30::before { width: 60%; }
+.ratings_35::before { width: 70%; }
+.ratings_40::before { width: 80%; }
+.ratings_45::before { width: 90%; }
+.ratings_50::before { width: 100%; }
 
-/* .ratings > .one-star::after {
-  float: left;
-  content: "";
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  background-image: url(./images/star.png);
-  background-size: 220px;
-  background-repeat: no-repeat;
-  background-position: 0px -45px;
-} */
-
-.casts > h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
+/* 출연진 */
 .casts {
   position: relative;
 }
@@ -160,7 +140,6 @@ html, body {
   height: 50px;
   position: absolute;
   left: 0px;
-  top: 50px;
   background-image: url(./images/tae.jpg);
   background-size: 50px;
   background-repeat: no-repeat;
@@ -174,7 +153,6 @@ html, body {
   height: 50px;
   position: absolute;
   left: 50px;
-  top: 50px;
   background-image: url(./images/ryu.jpg);
   background-size: 50px;
   background-repeat: no-repeat;
@@ -189,7 +167,6 @@ html, body {
   height: 50px;
   position: absolute;
   left: 100px;
-  top: 50px;
   background-image: url(./images/jin.jpg);
   background-size: 50px;
   background-repeat: no-repeat;
